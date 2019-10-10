@@ -1,19 +1,19 @@
-SECRET_KEY = "{secret_key}"
+SECRET_KEY = "uc4o&v%1d4js0)ivj%tftl@xpd@38j7+0hid*+b1167nz0x)cj"
 
 ## DATABASES['default'] is overridden in dev.py settings
 # If no data base is defined, a SQLite local DB will be used in dev, and an
 # error will thrown in prod
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '<db name>',
-        'USER': '<username>',
-        'PASSWORD': '<password>',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
+#     DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': '<db name>',
+#         'USER': '<username>',
+#         'PASSWORD': '<password>',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Its is optional to set up email, but is highly recommended
 # For development you can use you personal gmail( or any email provider)
