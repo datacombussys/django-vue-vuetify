@@ -2,6 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 
+import Users from "./modules/users/views/Users.vue";
+import UsersDash from "./modules/users/views/dashboard.vue";
+
 Vue.use(Router);
 
 export default new Router({
@@ -21,6 +24,18 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    // Users Module - Routes
+    {
+      path: "/users",
+      component: Users,
+      children: [
+        {
+          name: "route",
+          path: "/users/dash",
+          component: UsersDash
+        }
+      ]
     }
   ]
 });
