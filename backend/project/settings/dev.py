@@ -4,6 +4,8 @@ DEBUG = True
 
 MIDDLEWARE += [
     'commons.flushmidware.flushWare',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 if 'default' not in DATABASES:
@@ -13,4 +15,11 @@ if 'default' not in DATABASES:
     }
 
 
+STATIC_URL = '/api/django/static/'
 
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+]
