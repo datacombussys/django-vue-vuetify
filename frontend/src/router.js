@@ -4,6 +4,8 @@ import Home from "./views/Home.vue";
 
 import Users from "./modules/users/views/Users.vue";
 import UsersDash from "./modules/users/views/dashboard.vue";
+import Boot from "./views/bootstrap-dashboard.vue";
+import myDash from "./views/SmartSlimAdmin.vue";
 
 Vue.use(Router);
 
@@ -36,6 +38,16 @@ export default new Router({
           component: UsersDash
         }
       ]
+    },
+    {
+      path: "/boot-dash",
+      name: "boots",
+      component: Boot
+    },
+    {
+      path: "/my-dash",
+      name: "myDash",
+      component: myDash
     }
   ]
 });

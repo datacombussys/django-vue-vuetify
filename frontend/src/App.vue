@@ -1,32 +1,32 @@
 <template>
   <div class="root">
-    <v-card color="grey lighten-4" flat height="200px" tile>
-      <v-toolbar dense>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app>
+      <header-view></header-view>
 
-        <v-toolbar-title>Title</v-toolbar-title>
-
-        <div class="flex-grow-1"></div>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </v-toolbar>
-    </v-card>
-    <router-view></router-view>
+      <router-view></router-view>
+    </v-app>
   </div>
 </template>
 
 
-<style lang="scss">
+<script>
+import Header from "./components/header.vue";
+import Footer from "./components/footer.vue";
+import Navbar from "./components/navbar.vue";
+import flatheader from "./components/flatheader.vue";
+
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    "header-view": Header
+  }
+};
+</script>
+
+
+<style lang="scss" scoped>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,14 +34,23 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
 }
 </style>

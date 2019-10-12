@@ -1,5 +1,0 @@
-    1. icons not loading properly
-    2. Cant get vue-router to work properly
-    3. Figure out Module management scheme (folder organization)
-    4. How to manage CSS files
-    5. How to link to files using BASE_DIR in .vue and .js files
