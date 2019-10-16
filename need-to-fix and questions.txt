@@ -4,3 +4,6 @@
     4. How to manage CSS files
     5.
     6. How do  link a CSS file, or do I need to include it in my vue file?
+
+    Usage of BASE_URL
+    url("#{$baseURL}assets/images/backgrounds/bg-1.png")

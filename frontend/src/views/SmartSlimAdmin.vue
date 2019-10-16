@@ -4,7 +4,7 @@
     <!-- BEGIN Left Aside -->
     <aside class="page-sidebar">
       <div class="page-logo">
-        <p>Enter compnay logo here</p>
+        <p>Enter Company logo here</p>
       </div>
       <!-- BEGIN PRIMARY NAVIGATION -->
       <nav class="js-primary-nav">
@@ -50,7 +50,7 @@
           data-toggle="modal"
           data-target="#modal-shortcut"
         >
-          <img src="img/logo.png" alt="SmartAdmin WebApp" aria-roledescription="logo" />
+          <img src="#" alt="SmartAdmin WebApp" aria-roledescription="logo" />
           <span class="page-logo-text mr-1">Datacom Business Systems</span>
           <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
           <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
@@ -82,55 +82,22 @@
     </footer>
     <!---------- END Page Footer ---------->
     <!---------- END Page Wrapper ---------->
+    <h2>test of h2 tag and scss</h2>
   </div>
 </template>
 
 
 <script>
-// import Header from "./components/header.vue";
-// import Footer from "./components/footer.vue";
-// import Navbar from "./components/navbar.vue";
-// import flatheader from "./components/flatheader.vue";
-
 export default {
   data() {
     return {};
   },
-  components: {
-    // "Header-View": Header
-    // "Footer-View": Footer,
-    // "Navbar-View": Navbar,
-    // "Flatheader-View": Flatheader
-  }
+  components: {}
 };
 </script>
 
 
 <style lang="scss" scoped>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+@import "../assets/css/global.css";
+@import "../assets/scss/app.core.scss";
 </style>

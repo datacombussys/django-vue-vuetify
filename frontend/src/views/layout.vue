@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div class="reset-this">
     <template>
       <div class="main">
         <!-- BEGIN Page Wrapper -->
@@ -2372,4 +2372,5 @@ export default {};
 </script>
 
 <style lang="scss">
+@import "../assets/scss/app.core.scss";
 </style>
