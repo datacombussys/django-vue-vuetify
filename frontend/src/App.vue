@@ -8,9 +8,9 @@
 
 
 <script>
-import BootNav from "./components/nav.vue";
-import Footerbar from "./components/footer.vue";
-import Navbar from "./components/navbar.vue";
+import BootNav from "./structure/nav.vue";
+import Footerbar from "./structure/footer.vue";
+import Navbar from "./structure/navbar.vue";
 
 export default {
   data() {

@@ -5,7 +5,18 @@
         <stickynavbar-view></stickynavbar-view>
       </div>
       <div class="header-nav">
-        <headernav-view></headernav-view>
+        <div id="main-flex1">
+          <div class="hamburger">Hamburger Icon</div>
+          <div class="breadcrumb">
+            <breadcrumbs-view></breadcrumbs-view>
+          </div>
+        </div>
+        <div id="main-flex2">
+          <div class="pills">
+            <headernav-view></headernav-view>
+          </div>
+          <div class="userdata">User Data Here</div>
+        </div>
       </div>
       <div class="aside-nav">
         <leftnav-view></leftnav-view>
@@ -21,10 +32,11 @@
 </template>
 
 <script>
-import leftNav from "../components/left-nav.vue";
+import leftNav from "../structure/left-nav.vue";
 import table from "../components/table.vue";
-import stickyNav from "../components/navbar.vue";
-import headerNav from "../components/nav.vue";
+import stickyNav from "../structure/navbar.vue";
+import headerNav from "../structure/nav.vue";
+import Breadcrumbs from "../components/breadcrumbs.vue";
 
 export default {
   data() {
@@ -34,7 +46,8 @@ export default {
     "table-vue": table,
     "stickynavbar-view": stickyNav,
     "headernav-view": headerNav,
-    "leftnav-view": leftNav
+    "leftnav-view": leftNav,
+    "breadcrumbs-view": Breadcrumbs
   }
 };
 </script>
@@ -67,7 +80,7 @@ body {
   #main-layout {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
     grid-gap: 5px;
     max-width: 1920px;
     margin: 0 auto;
@@ -84,7 +97,9 @@ body {
 }
 
 #main-layout > * {
-  background: #c1ebfc;
+  padding: 0px;
+  margin: 0px;
+  background: #e5f8ff;
   padding: 30px;
 }
 .sticky-nav {
@@ -104,5 +119,40 @@ body {
 }
 .footer-section {
   grid-area: footer;
+}
+#main-flex1 {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+#main-flex2 {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+div.breadcrumb {
+  flex: 1;
+  order: 2;
+  justify-content: right;
+}
+div.pills {
+  flex: 1;
+  order: 2;
+}
+div.hamburger {
+  flex: 1;
+  order: 1;
+  text-align: left;
+}
+div.pagedata {
+  flex: 1;
+  order: 2;
+}
+div.userdata {
+  flex: 1;
+  order: 3;
+}
+div {
+  border: 1px solid;
 }
 </style>
