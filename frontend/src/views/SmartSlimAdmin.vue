@@ -98,6 +98,5 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../assets/css/global.css";
 @import "../assets/scss/app.core.scss";
 </style>

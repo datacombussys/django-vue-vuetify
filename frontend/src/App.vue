@@ -1,16 +1,14 @@
 <template>
-  <v-app>
-    <div>
-      <router-view></router-view>
-    </div>
-  </v-app>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 
 <script>
 import BootNav from "./structure/nav.vue";
 import Footerbar from "./structure/footer.vue";
-import Navbar from "./structure/navbar.vue";
+import Navbar from "./structure/stickyHeader.vue";
 
 export default {
   data() {
@@ -24,6 +22,5 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-@import "./assets/css/global.css";
+<style lang="scss">
 </style>

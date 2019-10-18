@@ -34,7 +34,7 @@
 <script>
 import leftNav from "../structure/left-nav.vue";
 import table from "../components/table.vue";
-import stickyNav from "../structure/navbar.vue";
+import stickyNav from "../structure/stickyHeader.vue";
 import headerNav from "../structure/nav.vue";
 import Breadcrumbs from "../components/breadcrumbs.vue";
 
@@ -53,19 +53,12 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/global.css";
-
-body {
-  color: rgb(0, 0, 0);
-  font-family: "Nunito Semibold";
-  text-align: center;
-}
 /* mobile grid */
 #main-layout {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+  grid-gap: 5px;
   max-width: 720px;
   margin: 0 auto;
   grid-template-areas:
@@ -142,6 +135,8 @@ div.pills {
 div.hamburger {
   flex: 1;
   order: 1;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
 }
 div.pagedata {

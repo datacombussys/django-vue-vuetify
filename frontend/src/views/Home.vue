@@ -22,5 +22,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/_modules/_custom.scss";
 </style>

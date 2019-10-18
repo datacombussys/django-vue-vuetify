@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar class="custom-Nav" toggleable="lg" type="dark" variant="primary">
       <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -30,8 +30,12 @@
             <template v-slot:button-content>
               <em>User</em>
             </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item>
+              <router-link to="/ian">Profile</router-link>
+            </b-dropdown-item>
+            <b-dropdown-item>
+              <router-link to="/login">Login</router-link>
+            </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -43,5 +47,8 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+.custom-Nav {
+  margin-bottom: 0px;
+}
 </style>

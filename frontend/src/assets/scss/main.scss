@@ -1,3 +1,18 @@
+$blue: #07659b !default;
+$indigo: #905ae7 !default;
+$purple: #200355 !default;
+$pink: #bd0e5f !default;
+$red: #be0417 !default;
+$orange: #ce6006 !default;
+$yellow: #ffc107 !default;
+$green: #139e34 !default;
+$teal: #60e2e2 !default;
+$cyan: #097e91 !default;
+
+a {
+  color: white;
+}
+
 .reset-this {
   animation: none;
   animation-delay: 0;
@@ -151,3 +166,6 @@
   all: initial;
   all: unset;
 }
+
+//import Bootstrap after my variables
+@import "../../../node_modules/bootstrap/scss/bootstrap";

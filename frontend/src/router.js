@@ -4,10 +4,10 @@ import Home from "./views/Home.vue";
 
 import Users from "./modules/users/views/Users.vue";
 import UsersDash from "./modules/users/views/dashboard.vue";
-import Boot from "./views/bootstrap-dashboard.vue";
-import myDash from "./views/SmartSlimAdmin.vue";
-import Smart from "./views/layout.vue";
+
+import HomeView from "./views/homeview.vue";
 import Ian from "./views/ians-layout.vue";
+import loginView from "./views/login-register.vue";
 
 Vue.use(Router);
 
@@ -21,13 +21,14 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/login",
+      name: "login",
+      component: loginView
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      // component: () =>
+      // import(/* webpackChunkName: "about" */ "./views/login-register.vue")
     },
     // Users Module - Routes
     {
@@ -42,19 +43,9 @@ export default new Router({
       ]
     },
     {
-      path: "/boot-dash",
-      name: "boots",
-      component: Boot
-    },
-    {
-      path: "/my-dash",
-      name: "myDash",
-      component: myDash
-    },
-    {
-      path: "/smart",
-      name: "smart",
-      component: Smart
+      path: "/hv",
+      name: "hv",
+      component: HomeView
     },
     {
       path: "/ian",
