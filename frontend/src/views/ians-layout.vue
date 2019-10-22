@@ -34,7 +34,7 @@
 <script>
 import leftNav from "../structure/left-nav.vue";
 import table from "../components/table.vue";
-import stickyNav from "../structure/stickyHeader.vue";
+
 import headerNav from "../structure/nav.vue";
 import Breadcrumbs from "../components/breadcrumbs.vue";
 
@@ -44,7 +44,7 @@ export default {
   },
   components: {
     "table-vue": table,
-    "stickynavbar-view": stickyNav,
+
     "headernav-view": headerNav,
     "leftnav-view": leftNav,
     "breadcrumbs-view": Breadcrumbs

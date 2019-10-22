@@ -6,13 +6,15 @@
 
 
 <script>
-import mainGrid from "../structure/maingrid.vue";
+import mainView from "./views/newhome.vue";
+import mainGrid from "./structure/maingrid.vue";
 
 export default {
   data() {
     return {};
   },
   components: {
+    "main-view": mainView,
     "maingrid-view": mainGrid
   }
 };

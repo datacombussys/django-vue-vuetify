@@ -9,7 +9,7 @@
         <hr />
         <br />
       </div>
-      <div>
+      <div class="container-fluid">
         <loginTabs-view></loginTabs-view>
       </div>
     </div>

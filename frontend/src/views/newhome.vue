@@ -1,10 +1,10 @@
 <template>
-  <div class="reset-this">
+  <div class="container-fluid p-0">
     <div class="fixed-top">
-      <stickyHeader-view></stickyHeader-view>
+      <top-header-view></top-header-view>
     </div>
     <div class="pt-2">
-      <drawer-view></drawer-view>
+      <nav-content></nav-content>
     </div>
     <div class="fixed-bottom">
       <footer-view></footer-view>
@@ -13,22 +13,20 @@
 </template>
 
 <script>
-import drawerNav from "../structure/navdrawer.vue";
-import sHeader from "../structure/stickyHeader.vue";
+import topHeader from "../structure/topheader.vue";
+import navContent from "../structure/newdrawer.vue";
 import footer from "../structure/footer.vue";
-
 export default {
   data() {
     return {};
   },
   components: {
-    "drawer-view": drawerNav,
-    "stickyHeader-view": sHeader,
+    "top-header-view": topHeader,
+    "nav-content": navContent,
     "footer-view": footer
   }
 };
 </script>
 
-<style>
-@import "../assets/scss/_main/_skeleton.scss";
+<style lang="scss" scoped>
 </style>

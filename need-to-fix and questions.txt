@@ -1,9 +1,11 @@
+1. Install Scrollbar for main content area
+2. Get collapse function to work. 50% operational currently
+3. 
+5.
+6. 
 
-    2. Cant get vue-router to work properly - Only main router.js
-    3. Figure out Module management scheme (folder organization)
-    4. How to manage CSS files
-    5.
-    6. How do  link a CSS file, or do I need to include it in my vue file?
 
+Notes:
     Usage of BASE_URL
     url("#{$baseURL}assets/images/backgrounds/bg-1.png")
+

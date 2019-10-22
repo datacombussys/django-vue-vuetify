@@ -1,13 +1,20 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Grid from "./structure/maingrid.vue";
+import mainContent from "./structure/main-content.vue";
 
+import tableView from "./components/table.vue";
 import Users from "./modules/users/views/Users.vue";
 import UsersDash from "./modules/users/views/dashboard.vue";
 
-import HomeView from "./views/homeview.vue";
 import Ian from "./views/ians-layout.vue";
 import loginView from "./views/login-register.vue";
+
+import dataTable from "./components/bootstrapTable.vue";
+import newview from "./views/newhome.vue";
+import saas from "./views/saas.vue";
+import testPage from "./modules/test/testpage.vue";
 
 Vue.use(Router);
 
@@ -16,8 +23,8 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
       name: "home",
+      path: "/",
       component: Home
     },
     {
@@ -32,25 +39,36 @@ export default new Router({
     },
     // Users Module - Routes
     {
-      path: "/users",
-      component: Users,
+      path: "/user",
+      component: Home,
       children: [
         {
-          name: "route",
-          path: "/users/dash",
-          component: UsersDash
+          path: "table",
+          component: dataTable
+        },
+        {
+          path: "test",
+          component: testPage
         }
       ]
     },
     {
-      path: "/hv",
-      name: "hv",
-      component: HomeView
-    },
-    {
-      path: "/ian",
       name: "ian",
-      component: Ian
+      path: "/ian",
+      component: dataTable
     }
   ]
 });
+
+//Children Nested Format
+// {
+//   path: "/users",
+//   component: Home,
+//   children: [
+//     {
+//       name: "saas-view",
+//       path: "/users/dash",
+//       component: saas
+//     }
+//   ]
+// },
