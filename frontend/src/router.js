@@ -7,13 +7,12 @@ import mainContent from "./structure/main-content.vue";
 import tableView from "./components/table.vue";
 import Users from "./modules/users/views/Users.vue";
 import UsersDash from "./modules/users/views/dashboard.vue";
+import dashBoardTemplate from "./structure/main-content-grid.vue";
 
-import Ian from "./views/ians-layout.vue";
 import loginView from "./views/login-register.vue";
 
-import dataTable from "./components/bootstrapTable.vue";
-import newview from "./views/newhome.vue";
-import saas from "./views/saas.vue";
+import dataTable from "./components/datatables/bootstrapTable.vue";
+
 import testPage from "./modules/test/testpage.vue";
 
 Vue.use(Router);
@@ -49,6 +48,10 @@ export default new Router({
         {
           path: "test",
           component: testPage
+        },
+        {
+          path: "dash",
+          component: dashBoardTemplate
         }
       ]
     },

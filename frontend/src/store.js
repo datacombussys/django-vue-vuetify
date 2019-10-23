@@ -5,22 +5,24 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    sidebarOn: false
+    toggleSB: false
   },
   mutations: {
     invertSidebar() {
-      if (this.state.sidebarOn === false) {
-        this.state.sidebarOn = true;
-      } else this.state.sidebarOn = false;
-      console.log(this.state.sidebarOn);
-      return this.state.sidebarOn;
+      if (this.state.toggleSB === false) {
+        this.state.toggleSB = true;
+      } else {
+        this.state.toggleSB = false;
+      }
+      console.log(this.state.toggleSB, "mutations");
+      return this.state.toggleSB;
     }
   },
   actions: {},
   getters: {
-    sideToggleState() {
-      console.log(this.state.sidebarOn);
-      return this.state.sidebarOn;
+    sideToggleState(state) {
+      console.log(state.toggleSB);
+      return state.toggleSB;
     }
   }
 });

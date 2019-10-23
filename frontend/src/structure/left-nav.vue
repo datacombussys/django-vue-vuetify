@@ -1,6 +1,6 @@
 <template>
   <div class="reset-this">
-    <nav :class="{'collapsedsb': toggleSB}" class="main-nav bg-primary">
+    <nav class="main-nav bg-primary">
       <div class="sidebar-header">
         <h3>My SIDEBAR</h3>
       </div>
@@ -86,14 +86,7 @@
 <script>
 export default {
   data() {
-    return {
-      data123: false
-    };
-  },
-  computed: {
-    toggleSB() {
-      return this.$store.getters.sidebarToggle;
-    }
+    return {};
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="reset-this">
-    <section @click="changeStore" class="grid-layout">
+    <section :class="{'grid-layout-two': toggleSB}" class="grid-layout">
       <div class="main-area">
         <div class="section float-left container-fluid pl-3">
           <mainContent-view></mainContent-view>
@@ -35,6 +35,7 @@ import topNav from "./topNav.vue";
 import secondNav from "./secondNav.vue";
 import mainContent from "./main-content.vue";
 import footer from "./footer.vue";
+import mainContentFlex from "./main-content-grid.vue";
 
 export default {
   data() {
@@ -48,9 +49,11 @@ export default {
     "mainContent-view": mainContent,
     "footer-view": footer
   },
-  methods: {
-    changeStore() {
-      this.$store.commit("invertSidebar");
+  methods: {},
+  computed: {
+    toggleSB() {
+      console.log(this.$store.getters.sideToggleState, "toggleSB Computed");
+      return this.$store.getters.sideToggleState;
     }
   }
 };

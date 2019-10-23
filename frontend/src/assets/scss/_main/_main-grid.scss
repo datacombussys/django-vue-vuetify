@@ -12,6 +12,7 @@ section {
   padding: 0px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .sidebar--left {
@@ -21,7 +22,7 @@ section {
   color: rgba(white, 0.9);
   padding: 0.25em;
   max-width: 250px;
-  height: 100vh;
+  height: 100%;
   transition: all 0.5s;
   position: -webkit-sticky;
   position: sticky;
@@ -67,13 +68,14 @@ section {
 .main-area {
   background: #effffb;
   color: #333;
+  margin: 18px 0px;
   padding: 0px;
   height: 100%;
 }
 .top-nav2 {
   background: #eb6913;
   color: white;
-  padding: 0px;
+  margin: 8px 0px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.432);
 }
 header {
@@ -123,7 +125,6 @@ footer {
   }
   .main-area {
     grid-area: ma;
-    height: 880px;
   }
   // .sidebar--right {
   //   grid-area: sr;
@@ -140,14 +141,14 @@ footer {
   grid-template-rows: 5% 5% auto auto auto auto auto 10% 5%;
   grid-template-areas:
     "head head head head head head head"
-    "sl head2 head2 head2 head2 head2 head2"
-    "sl ma ma ma ma ma ma"
-    "sl ma ma ma ma ma ma"
-    "sl ma ma ma ma ma ma"
-    "sl ma ma ma ma ma ma"
-    "sl ma ma ma ma ma ma"
-    "sl ma ma ma ma ma ma"
-    "sl foot foot foot foot foot foot";
+    "head2 head2 head2 head2 head2 head2 head2"
+    "ma ma ma ma ma ma ma"
+    "ma ma ma ma ma ma ma"
+    "ma ma ma ma ma ma ma"
+    "ma ma ma ma ma ma ma"
+    "ma ma ma ma ma ma ma"
+    "ma ma ma ma ma ma ma"
+    "foot foot foot foot foot foot foot";
 
   header {
     grid-area: head;

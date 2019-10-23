@@ -2,7 +2,7 @@
   <div class="reset-this">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-0">
       <div class="d-flex flex-row">
-        <button type="button" class="btn btn-info">
+        <button @click="callStorefunc()" type="button" class="btn btn-info">
           <span>Toggle Sidebar</span>
         </button>
         <div id="navbarNav" class="justify-content-end">
@@ -31,7 +31,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    callStorefunc() {
+      this.$store.commit("invertSidebar");
+    }
+  }
 };
 </script>
 

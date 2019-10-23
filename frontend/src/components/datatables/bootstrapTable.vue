@@ -81,32 +81,36 @@
         </b-card>
       </template>
     </b-table>
-    <b-row class>
-      <b-col sm="5" md="6" xl="3" class="my-1">
-        <b-form-group
-          label="Per page"
-          label-cols-sm="6"
-          label-cols-md="4"
-          label-cols-lg="3"
-          label-align-sm="right"
-          label-size="sm"
-          label-for="perPageSelect"
-          class="mb-0"
-        >
-          <b-form-select v-model="perPage" id="perPageSelect" size="sm" :options="pageOptions"></b-form-select>
-        </b-form-group>
-      </b-col>
-
-      <b-col sm="7" md="6" xl="3" class="my-1">
-        <b-pagination
-          v-model="currentPage"
-          :total-rows="totalRows"
-          :per-page="perPage"
-          align="fill"
-          size="sm"
-          class="my-0"
-        ></b-pagination>
-      </b-col>
+    <b-row class="flex-pagination">
+      <div class="pagination-item">
+        <b-col sm="12" md="12" xl="12" class="my-1">
+          <b-form-group
+            label="Per page"
+            label-cols-sm="6"
+            label-cols-md="4"
+            label-cols-lg="3"
+            label-align-sm="right"
+            label-size="sm"
+            label-for="perPageSelect"
+            class="mb-0"
+          >
+            <b-form-select v-model="perPage" id="perPageSelect" size="sm" :options="pageOptions"></b-form-select>
+          </b-form-group>
+        </b-col>
+      </div>
+      <div class="pagination-item"></div>
+      <div class="pagination-item">
+        <b-col sm="12" md="12" xl="12" class="my-1">
+          <b-pagination
+            v-model="currentPage"
+            :total-rows="totalRows"
+            :per-page="perPage"
+            align="fill"
+            size="sm"
+            class="my-0"
+          ></b-pagination>
+        </b-col>
+      </div>
     </b-row>
 
     <!-- Info modals -->
@@ -225,3 +229,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../../assets/scss/_main/datatables.scss";
+</style>
