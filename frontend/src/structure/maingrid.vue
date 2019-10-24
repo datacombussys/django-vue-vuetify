@@ -35,7 +35,6 @@ import topNav from "./topNav.vue";
 import secondNav from "./secondNav.vue";
 import mainContent from "./main-content.vue";
 import footer from "./footer.vue";
-import mainContentFlex from "./main-content-grid.vue";
 
 export default {
   data() {

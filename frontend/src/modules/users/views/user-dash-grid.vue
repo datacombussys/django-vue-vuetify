@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import userDash from "../modules/users/views/dashboard.vue";
+import userDash from "../../../modules/users/views/sample-content.vue";
 export default {
   data() {
     return {};
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/scss/_main/main-content-grid.scss";
+@import "../../../assets/scss/_main/user-dash-grid.scss";
 </style>

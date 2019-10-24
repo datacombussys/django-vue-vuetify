@@ -5,10 +5,10 @@ import Grid from "./structure/maingrid.vue";
 import mainContent from "./structure/main-content.vue";
 
 import tableView from "./components/table.vue";
-import Users from "./modules/users/views/Users.vue";
-import UsersDash from "./modules/users/views/dashboard.vue";
-import dashBoardTemplate from "./structure/main-content-grid.vue";
-
+import Users from "./modules/users/views/userBlogs.vue";
+import UsersDash from "./modules/users/views/sample-content.vue";
+import dashBoardTemplate from "./modules/users/views/user-dash-grid.vue";
+import userCRUD from "./modules/users/views/user-crud.vue";
 import loginView from "./views/login-register.vue";
 
 import dataTable from "./components/datatables/bootstrapTable.vue";
@@ -52,6 +52,10 @@ export default new Router({
         {
           path: "dash",
           component: dashBoardTemplate
+        },
+        {
+          path: "crud",
+          component: userCRUD
         }
       ]
     },

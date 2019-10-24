@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h3>Router-Links Below</h3>
+    <!--This router view loads the User 
+    dashboard page or the User Forms page-->
     <router-view />
-    <router-view name="userdash-view" />
-    <router-view name="usertest-view" />
   </div>
 </template>
 

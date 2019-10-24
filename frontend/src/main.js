@@ -15,6 +15,12 @@ import "./assets/scss/main.css";
 //Popper
 import "popper.js/dist/popper.js";
 
+//Axios
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
+Vue.prototype.$axios = axios;
+
 // jquery
 global.$ = $;
 
@@ -23,6 +29,8 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  VueAxios,
+  axios,
   // vuetify,
   render: h => h(App)
 }).$mount("#app");
