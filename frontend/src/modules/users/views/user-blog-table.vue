@@ -1,7 +1,6 @@
 <template>
   <b-container fluid>
     <!-- User Interface controls -->
-    <h3>sdkjfbadfkvbadifb</h3>
     <b-row>
       <b-col lg="6" class="my-1">
         <b-form-group
@@ -60,7 +59,7 @@
       :sort-direction="sortDirection"
       @filtered="onFiltered"
     >
-      <template v-slot:cell(name)="row">{{ row.value.first }} {{ row.value.last }}</template>
+      <template v-slot:cell(name)="row"></template>
 
       <template v-slot:cell(actions)="row">
         <b-button
@@ -128,58 +127,39 @@ export default {
       blogs: [],
       items: [
         {
-          isActive: true,
-          age: 40,
-          name: { first: "Dickerson", last: "Macdonald" }
+          author: 2,
+          title: "Lorem Ipsum",
+          content: "all of the content you need..."
         },
-        { isActive: false, age: 21, name: { first: "Larsen", last: "Shaw" } },
         {
-          isActive: false,
-          age: 9,
-          name: { first: "Mini", last: "Navarro" },
-          _rowVariant: "success"
+          author: 2,
+          title: "who is lorem",
+          content:
+            "lorem ipsum dolor.Eget gravida cum sociis natoque. Gravida arcu ac tortor dignissim convallis. Orci porta non pulvinar /n neque laoreet. Et malesuada fames ac turpis egestas sed. Quisque non tellus orci ac. Lectus arcu bibendum at varius. Lectus magna /n fringilla urna porttitor rhoncus dolor purus. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Aenean et tortor at /n risus viverra. Aliquet nibh praesent tristique magna sit amet purus gravida. Penatibus et magnis dis parturient montes. Neque ornare /n aenean euismod elementum nisi quis eleifend q"
         },
-        { isActive: false, age: 89, name: { first: "Geneva", last: "Wilson" } },
-        { isActive: true, age: 38, name: { first: "Jami", last: "Carney" } },
-        { isActive: false, age: 27, name: { first: "Essie", last: "Dunlap" } },
-        { isActive: true, age: 40, name: { first: "Thor", last: "Macdonald" } },
         {
-          isActive: true,
-          age: 87,
-          name: { first: "Larsen", last: "Shaw" },
-          _cellVariants: { age: "danger", isActive: "warning" }
-        },
-        { isActive: false, age: 26, name: { first: "Mitzi", last: "Navarro" } },
-        {
-          isActive: false,
-          age: 22,
-          name: { first: "Genevieve", last: "Wilson" }
-        },
-        { isActive: true, age: 38, name: { first: "John", last: "Carney" } },
-        { isActive: false, age: 29, name: { first: "Dick", last: "Dunlap" } }
+          author: 3,
+          title: "Lectus Lorem",
+          content:
+            "Lectus arcu bibendum at varius. Lectus magna /n fringilla urna porttitor rhoncus dolor purus. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Aenean et tortor at /n risus viverra. Aliquet nibh praesent tristique magna sit amet purus gravida. Penatibus et magnis dis parturient montes. Neque ornare /n aenean euismod elementum nisi quis eleifend quam. Ac auctor augue mauris augue neque gravida in fermentum. Faucibus scelerisque /n eleifend donec pretium vulputate sapien nec. Id velit ut tortor pretium viverra suspendis"
+        }
       ],
       fields: [
         {
-          key: "name",
-          label: "Full Name",
+          key: "author",
+          label: "Author ID",
           sortable: true,
           sortDirection: "desc"
         },
         {
-          key: "age",
-          label: "Age",
+          key: "title",
+          label: "Title",
           sortable: true,
           class: "text-center"
         },
         {
-          key: "isActive",
-          label: "is Active",
-          formatter: (value, key, item) => {
-            return value ? "Yes" : "No";
-          },
-          sortable: true,
-          sortByFormatted: true,
-          filterByFormatted: true
+          key: "content",
+          label: "Content"
         },
         { key: "actions", label: "Actions" }
       ],
@@ -228,18 +208,18 @@ export default {
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
     }
-  },
-  create() {
-    this.$store.dispatch("fetchBlogs");
-  },
-  beforeMount() {
-    this.blogs = this.$store.getters.getBlogs;
-    console.log(this.blogs, "userblogs Computed");
-    return this.$store.getters.getBlogs;
   }
+  //   create() {
+  //     this.$store.dispatch("fetchBlogs");
+  //   },
+  //   beforeMount() {
+  //     this.blogs = this.$store.getters.getBlogs;
+  //     console.log(this.blogs, "userblogs Computed");
+  //     return this.$store.getters.getBlogs;
+  //   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/_main/datatables.scss";
+@import "../../../assets/scss/_main/datatables.scss";
 </style>

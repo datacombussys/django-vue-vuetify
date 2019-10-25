@@ -9,8 +9,7 @@ import "@babel/polyfill";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 
-// import consolidated css including bootsrap
-import "./assets/scss/main.css";
+
 
 //Popper
 import "popper.js/dist/popper.js";
@@ -20,6 +19,16 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 Vue.prototype.$axios = axios;
+
+//Ant Design
+import "./plugins/antdesign.js";
+import "ant-design-vue/dist/antd.css";
+
+//filters
+import VueFilters from "./plugins/filters.js";
+
+// import consolidated css including bootsrap
+import "./assets/scss/main.css";
 
 // jquery
 global.$ = $;
@@ -31,6 +40,7 @@ new Vue({
   store,
   VueAxios,
   axios,
+  VueFilters,
   // vuetify,
   render: h => h(App)
 }).$mount("#app");

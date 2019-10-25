@@ -71,6 +71,7 @@ section {
   margin: 18px 0px;
   padding: 0px;
   height: 100%;
+  max-width: 1920px;
 }
 .top-nav2 {
   background: #eb6913;
@@ -86,6 +87,7 @@ header {
   position: sticky;
   top: -1px;
   width: 100vw;
+  
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.432);
 }
 footer {
@@ -103,6 +105,7 @@ footer {
   display: grid;
   grid-template-columns: minmax(13%, 15%) auto auto auto auto auto 10%;
   grid-template-rows: 5% 5% auto auto auto auto auto 10% 5%;
+  transition: all 0.5s;
   grid-template-areas:
     "head head head head head head head"
     "sl head2 head2 head2 head2 head2 head2"
@@ -139,6 +142,7 @@ footer {
   display: grid;
   grid-template-columns: minmax(auto, 0%) auto auto auto auto auto 10%;
   grid-template-rows: 5% 5% auto auto auto auto auto 10% 5%;
+  transition: all 0.5s;
   grid-template-areas:
     "head head head head head head head"
     "head2 head2 head2 head2 head2 head2 head2"

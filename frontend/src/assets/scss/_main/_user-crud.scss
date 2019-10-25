@@ -1,9 +1,12 @@
 .user-crud-grid {
   margin: 0 auto;
+  max-width: 1920px;
   display: flex;
   max-height: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: column;
+  overflow: scroll;
+  
 
   .top-row-data {
     flex: auto;
@@ -28,6 +31,7 @@
     border: 2px solid red;
 
     .dash-left {
+      max-width: 50%;
       flex: 0 1 50%;
       margin: 0.25em auto;
       background: rgb(101, 248, 248);
@@ -35,7 +39,7 @@
     }
 
     .dash-right {
-      flex: 1 1 50%;
+      flex: 1 0 50%;
       margin: 0.25em auto;
       background: springgreen;
     }

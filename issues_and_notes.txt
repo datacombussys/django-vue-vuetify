@@ -1,6 +1,6 @@
-1. Install Scrollbar for main content area
-2. Get collapse function to work. 50% operational currently
-3. sass main.scss main.css
+1. Blog Table
+2. custom filters
+3. 
 5.
 6. 
 
