@@ -6,16 +6,16 @@
       </div>
     </div>
     <div class="main-section-row">
-      <div class="dash-left">
-        <userBlogForm-view></userBlogForm-view>
-      </div>
+      <div class="dash-left"></div>
       <div class="dash-right">
-        <userBlogTable-view></userBlogTable-view>
+        <!-- <userBlogTable-view></userBlogTable-view> -->
+        <userBlogBuefy-view></userBlogBuefy-view>
       </div>
     </div>
     <div class="bottom-row">
       <div class="dash-bottom">
-        <userBlogTemplate-view></userBlogTemplate-view>
+        <!-- <userBlogTemplate-view></userBlogTemplate-view> -->
+        <userDashInfo-view></userDashInfo-view>
       </div>
     </div>
   </div>
@@ -23,9 +23,10 @@
 
 <script>
 import userBlogTable from "../../../modules/users/views/user-blog-table.vue";
-import userDash from "../../../modules/users/views/sample-content.vue";
+import userSample from "../../../modules/users/views/sample-content.vue";
 import userBlogTemplate from "../../../modules/users/views/userBlogs.vue";
-import userBlogForm from "../../../modules/users/views/userBlogForm.vue";
+// import userBlogForm from "../../../modules/users/views/userBlogForm.vue";
+import userBlogBuefy from "../../../modules/users/views/user-blog-table-buefy.vue";
 
 export default {
   data() {
@@ -33,9 +34,10 @@ export default {
   },
   components: {
     "userBlogTable-view": userBlogTable,
-    "userDashInfo-view": userDash,
+    "userDashInfo-view": userSample,
     "userBlogTemplate-view": userBlogTemplate,
-    "userBlogForm-view": userBlogForm
+    // "userBlogForm-view": userBlogForm,
+    "userBlogBuefy-view": userBlogBuefy
   }
 };
 </script>

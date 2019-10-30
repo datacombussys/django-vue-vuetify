@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -18,16 +19,17 @@ export default new Vuex.Store({
       console.log(this.state.toggleSB, "mutations");
       return this.state.toggleSB;
     },
-    fetchBlogs(state) {
-      Vue.axios.get("http://127.0.0.1:8080/api/blog/").then(response => {
-        console.log(response.data, "fetch data mutations");
-        state.blogs = response.data;
-      });
+    fetchBlogs(state, payload) {
+      console.log("fetchBlogs mutations");
+      state.blogs = payload;
     }
   },
   actions: {
     fetchBlogs(context) {
-      context.commit("fetchBlogs");
+      axios.get("/api/blog/").then(response => {
+        console.log(response.data, "fetch data actions");
+        context.commit("fetchBlogs", response.data);
+      });
     }
   },
   getters: {
@@ -41,13 +43,3 @@ export default new Vuex.Store({
     }
   }
 });
-
-// {
-//   author: "",
-//   title: "",
-//   content: "",
-//   date_posted: "",
-//   last_updated: "",
-//   slug: "",
-//   blog_title_image: ""
-// }

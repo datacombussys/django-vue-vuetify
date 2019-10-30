@@ -1,28 +1,49 @@
 <template>
   <div class="reset-this">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-0">
-      <div class="d-flex flex-row">
-        <button @click="callStorefunc()" type="button" class="btn btn-info">
-          <span>Toggle Sidebar</span>
-        </button>
-        <div id="navbarNav" class="justify-content-end">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <router-link class="nav-link text-white" to="/">Home</router-link>
-            </li>
-            <li class="nav-item active">
-              <router-link class="nav-link text-white" to="/home/test">Dashboard</router-link>
-            </li>
-            <li class="nav-item active">
-              <router-link class="nav-link text-white" to="/home/saas">SAAS</router-link>
-            </li>
-            <li class="nav-item active">
-              <router-link class="nav-link text-white" disabled to="/">TestPage</router-link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <b-navbar class="navbar2">
+      <template slot="brand">
+        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+             
+        <b-button @click="callStorefunc()"
+        size="is-small"
+        icon-left="menu" 
+        inverted>
+        Toggle Me
+        </b-button>
+            </b-navbar-item>
+        </template>
+        <template slot="start">
+            <b-navbar-item href="#">
+                Home
+            </b-navbar-item>
+            <b-navbar-item href="#">
+                Documentation
+            </b-navbar-item>
+            <b-navbar-dropdown label="Info">
+                <b-navbar-item href="#">
+                    About
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Contact
+                </b-navbar-item>
+            </b-navbar-dropdown>
+        </template>
+
+        <template slot="end">
+            <b-navbar-item tag="div">
+                <div class="buttons">
+                    <a class="button is-warning">
+                        <strong>Profile</strong>
+                    </a>
+                    <a class="button is-light">
+                        Status
+                    </a>
+                </div>
+            </b-navbar-item>
+        </template>
+      </b-navbar>
+    
+    </div> 
   </div>
 </template>
 

@@ -1,4 +1,5 @@
 import Vue from "vue";
+import "./plugins/axios";
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import router from "./router";
@@ -9,28 +10,43 @@ import "@babel/polyfill";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 
-
-
 //Popper
 import "popper.js/dist/popper.js";
 
 //Axios
-import axios from "axios";
-import VueAxios from "vue-axios";
-Vue.use(VueAxios, axios);
-Vue.prototype.$axios = axios;
+// import axios from "axios";
+// import VueAxios from "vue-axios";
+// Vue.use(VueAxios, axios);
+// Vue.prototype.$axios = axios;
+import "./plugins/axios.js";
 
-//Ant Design
-import "./plugins/antdesign.js";
-import "ant-design-vue/dist/antd.css";
+//Import Buefy
+import "./plugins/buefy.js";
 
 //filters
 import VueFilters from "./plugins/filters.js";
 
-// import consolidated css including bootsrap
-import "./assets/scss/main.css";
+// import MAIN SCSS SASS and LESS files
+
+import "./assets/less/main.less";
+import "./assets/sass/main.sass";
+import "./assets/scss/main.scss";
+
+// import Ant-Design-Vue
+import "./plugins/ant-design-vue.js";
+
+//Import Framework7 Components
+import Framework7 from "framework7/framework7.esm.bundle.js";
+import Framework7Vue from "framework7-vue/framework7-vue.esm.bundle.js";
+
+// Import Icons and App Custom Styles
+import "./css/icons.css";
+import "./css/app.css";
+
+Framework7.use(Framework7Vue);
 
 // jquery
+import $ from "jquery";
 global.$ = $;
 
 Vue.config.productionTip = false;
@@ -38,9 +54,9 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  VueAxios,
-  axios,
-  VueFilters,
+  // VueAxios,
+  // axios,
+  // VueFilters,
   // vuetify,
   render: h => h(App)
 }).$mount("#app");

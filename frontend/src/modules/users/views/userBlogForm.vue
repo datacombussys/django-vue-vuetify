@@ -22,7 +22,14 @@
         </b-form-group>
 
         <b-form-group id="input-group-3" label="Blog Content:" label-for="input-3">
-          <b-form-textarea class="custom-control" id="input-3" rows="10" max-rows="20" v-model="form.content" required></b-form-textarea>
+          <b-form-textarea
+            class="custom-control"
+            id="input-3"
+            rows="10"
+            max-rows="20"
+            v-model="form.content"
+            required
+          ></b-form-textarea>
         </b-form-group>
 
         <b-form-file
@@ -45,11 +52,10 @@
             placeholder="Enter Proper Slug"
           ></b-form-input>
         </b-form-group>
+        <br />
+        <!-- <a-date-picker showTime placeholder="Select Time" @change="onChange" @ok="onOk" /> -->
 
         <br />
-        <p>
-          <a-date-picker showTime placeholder="Select Time" @change="onChange" @ok="onOk" />
-        </p>
 
         <br />
 
@@ -59,9 +65,9 @@
       <b-card class="mt-3" header="Form Data Result">
         <pre class="m-0">{{ form }}</pre>
       </b-card>
-    <div>
+      <div>
         <sampleData-view></sampleData-view>
-    </div>
+      </div>
     </div>
   </div>
 </template>
@@ -82,44 +88,43 @@ export default {
         value2: ""
       },
       show: true,
-      file: null      
-      
+      file: null
     };
   },
   methods: {
     onSubmit(evt) {
-    evt.preventDefault()
-     this.$http.post('http://127.0.0.1:8000/api/blog/',{
-         author: this.form.author,
-         title: this.form.title,
-         slug: this.form.slug,
-         content: this.form.content
-     })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+      evt.preventDefault();
+      this.$http
+        .post("http://127.0.0.1:8000/api/blog/", {
+          author: this.form.author,
+          title: this.form.title,
+          slug: this.form.slug,
+          content: this.form.content
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     },
 
-    onChange(date, dateString) {
-        this.form.date = date;
-        this.form.datestring = dateString;
-      console.log('onChange: ', date, dateString);
-    },
+    // onChange(date, dateString) {
+    //   this.form.date = date;
+    //   this.form.datestring = dateString;
+    //   console.log("onChange: ", date, dateString);
+    // },
 
-    onOk(value) {
-      this.form.last_updated = value;
-      console.log('onOk: ', value);
-    },
+    // onOk(value) {
+    //   this.form.last_updated = value;
+    //   console.log("onOk: ", value);
+    // }
   },
- components: {
-     "sampleData-view": SampleData,
- },
+  components: {
+    "sampleData-view": SampleData
+  }
 };
 </script>
 
 <style lang="scss">
-@import "../../../assets/scss/main.scss";
 </style>

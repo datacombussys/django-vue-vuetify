@@ -1,6 +1,14 @@
 const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
+  css: {
+    loaderOptions: {
+      less: {
+        javascriptEnabled: true
+      }
+    }
+  },
   devServer: {
     proxy: {
       "/api": {
@@ -9,9 +17,10 @@ module.exports = {
       }
     }
   },
-  transpileDependencies: ["vuetify"],
+
+  // transpileDependencies: ["vuetify"],
   chainWebpack: config => {
-    // GraphQL Loader
+    // Sass Scss Files
     config.module
       .rule("saas")
       .test(/\.s[ac]ss$/i)

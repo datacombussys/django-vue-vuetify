@@ -208,15 +208,15 @@ export default {
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
     }
-  }
-  //   create() {
-  //     this.$store.dispatch("fetchBlogs");
-  //   },
-  //   beforeMount() {
-  //     this.blogs = this.$store.getters.getBlogs;
-  //     console.log(this.blogs, "userblogs Computed");
-  //     return this.$store.getters.getBlogs;
-  //   }
+  },
+    create() {
+      this.$store.dispatch("fetchBlogs");
+    },
+    beforeMount() {
+      this.blogs = this.$store.getters.getBlogs;
+      console.log(this.blogs, "userblogs Computed");
+      return this.$store.getters.getBlogs;
+    }
 };
 </script>
 

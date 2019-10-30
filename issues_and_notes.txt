@@ -1,7 +1,7 @@
-1. Blog Table
-2. custom filters
+1. 
+2. 
 3. 
-5.
+5. 
 6. 
 
 
@@ -9,3 +9,6 @@ Notes:
     Usage of BASE_URL
     url("#{$baseURL}assets/images/backgrounds/bg-1.png")
 
+
+<div for person in people>
+<h1> {{ people.firstmname | capitalize }} <h2>

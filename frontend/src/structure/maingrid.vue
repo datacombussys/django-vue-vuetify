@@ -1,20 +1,19 @@
 <template>
   <div class="reset-this">
-    <section :class="{'grid-layout-two': toggleSB}" class="grid-layout">
+    <section :class="{'grid-layout-two': toggleSB }" class="grid-layout">
       <div class="main-area">
-        <div class="section float-left container-fluid pl-3">
+        <div class="section container-fluid pl-3">
           <mainContent-view></mainContent-view>
         </div>
       </div>
       <div class="top-nav2">
         <secondNav-view></secondNav-view>
       </div>
-
       <div class="sidebar--left">
         <leftnav-view></leftnav-view>
       </div>
-
-      <!-- <div class="sidebar sidebar--right">
+      <!--
+      <div class="sidebar sidebar--right">
         <rightNav-view></rightNav-view>
       </div>-->
       <header>
@@ -26,8 +25,6 @@
     </section>
   </div>
 </template>
-
-
 <script>
 import leftNav from "./left-nav.vue";
 import rightNav from "./right-nav.vue";
@@ -40,6 +37,7 @@ export default {
   data() {
     return {};
   },
+
   components: {
     "leftnav-view": leftNav,
     "rightNav-view": rightNav,
@@ -48,7 +46,9 @@ export default {
     "mainContent-view": mainContent,
     "footer-view": footer
   },
+
   methods: {},
+
   computed: {
     toggleSB() {
       console.log(this.$store.getters.sideToggleState, "toggleSB Computed");
@@ -57,7 +57,6 @@ export default {
   }
 };
 </script>
-
 <style lang="scss" scoped>
 @import "../assets/scss/_main/main-grid.scss";
 @import "../assets/scss/_main/main-grid-styling.scss";
